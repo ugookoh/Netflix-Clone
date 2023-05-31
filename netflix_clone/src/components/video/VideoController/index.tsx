@@ -8,7 +8,7 @@ import { IVideoProps, colors } from "values";
 import { hhmmss } from "utils";
 import { useSearchParams } from "react-router-dom";
 
-const icon_size = 50;
+const icon_size = 30;
 
 const VideoController = ({ videoRef, playing, progress, setProgress, setPlaying, setLoading }: IVideoProps) => {
   const [isFullscreen, setIsFullscreen] = React.useState(false);

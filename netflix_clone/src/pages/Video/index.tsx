@@ -27,7 +27,7 @@ const VideoScreen = () => {
     <div className={styles.container}>
       {showTools && (
         <ClickableDiv className={styles.backButton} onPress={() => navigate("/")}>
-          <BsArrowLeft color={colors.WHITE} size={50} />
+          <BsArrowLeft color={colors.WHITE} size={30} />
         </ClickableDiv>
       )}
       {!id ? (

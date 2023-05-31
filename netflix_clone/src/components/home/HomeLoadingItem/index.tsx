@@ -7,15 +7,15 @@ const HomeLoadingItem = () => {
   return (
     <div className={styles.container}>
       <Skeleton
-        width={450}
-        height={190}
+        width={300}
+        height={120}
         baseColor={`rgba(235, 235, 235, 0.1)`}
         highlightColor={`rgba(245, 245, 245, 0.1)`}
         duration={4}
       />
       <Skeleton
-        width={450}
-        height={50}
+        width={300}
+        height={40}
         baseColor={`rgba(235, 235, 235, 0.1)`}
         highlightColor={`rgba(245, 245, 245, 0.1)`}
         duration={4}
