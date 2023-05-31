@@ -4,7 +4,7 @@ import { ClickableDiv } from "components";
 import { BsFillPlayFill } from "react-icons/bs";
 import { BiFullscreen, BiPause, BiExitFullscreen } from "react-icons/bi";
 import { MdForward10, MdReplay10 } from "react-icons/md";
-import { IVideoProps, TProgressState, colors } from "values";
+import { IVideoProps, colors } from "values";
 import { hhmmss } from "utils";
 import { useSearchParams } from "react-router-dom";
 
@@ -39,7 +39,7 @@ const VideoController = ({ videoRef, playing, progress, setProgress, setPlaying,
   const handleVideoForwardOrBackward = (type: "forward" | "backward") => {
     if (!videoRef.current) return;
     let currentTime = videoRef.current.currentTime;
-    if (type == "forward") currentTime = Math.min(currentTime + 10, videoRef.current.duration);
+    if (type === "forward") currentTime = Math.min(currentTime + 10, videoRef.current.duration);
     else currentTime = Math.max(currentTime - 10, 0);
     videoRef.current.currentTime = currentTime;
     setProgress((prev) => {

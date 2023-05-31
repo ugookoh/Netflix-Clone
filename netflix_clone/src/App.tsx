@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route, Outlet, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { Home, NoMatch, Upload, Video } from "pages";
 
 function AppRouter() {

@@ -13,6 +13,7 @@ const useSearch = () => {
   useEffect(() => {
     queryRef.current = query;
     getVideos();
+    // eslint-disable-next-line
   }, [query]);
 
   const getVideos = debounce(async () => {

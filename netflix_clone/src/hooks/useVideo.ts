@@ -5,7 +5,7 @@ import { TProgressState } from "values";
 
 const useVideo = (videoRef: React.MutableRefObject<HTMLVideoElement | null>) => {
   const [playing, setPlaying] = useState(false);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [showIcon, setShowIcon] = useState(false);
   const [showTools, setShowTools] = useState(true);
   let { id } = useParams();
@@ -46,8 +46,10 @@ const useVideo = (videoRef: React.MutableRefObject<HTMLVideoElement | null>) => 
     videoRef.current.addEventListener("progress", handleVideoProgress);
 
     return () => {
-      if (videoRef.current) videoRef.current.removeEventListener("progress", handleVideoProgress);
+      // eslint-disable-next-line
+      videoRef?.current?.removeEventListener("progress", handleVideoProgress);
     };
+    // eslint-disable-next-line
   }, []);
 
   useEffect(() => {
@@ -58,6 +60,7 @@ const useVideo = (videoRef: React.MutableRefObject<HTMLVideoElement | null>) => 
       videoRef.current.play();
       videoRef.current.muted = false;
     }
+    // eslint-disable-next-line
   }, [playing]);
 
   const toggleShowIcon = () => {

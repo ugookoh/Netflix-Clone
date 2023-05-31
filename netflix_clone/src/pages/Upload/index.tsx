@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import styles from "./styles.module.scss";
 import { ClickableDiv, Header, VideoUpload } from "components";
 import { useUpload } from "hooks";

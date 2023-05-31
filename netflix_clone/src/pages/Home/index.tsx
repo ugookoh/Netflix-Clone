@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styles from "./styles.module.scss";
-import { Header, HomeItem, HomeLoadingItem, LoadingView } from "components";
+import { Header, HomeItem, LoadingView } from "components";
 import { useSearch } from "hooks";
-import { IVideoSearchResults } from "values";
 
 const HomeScreen = () => {
   const { loading, results, query, randomList, setQuery } = useSearch();

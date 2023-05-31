@@ -1,4 +1,5 @@
-export default {
-  BASE_URL: "netflix-clone-backend.up.railway.app:8080",
+const constants = {
+  BASE_URL: "https://netflix-clone-backend.up.railway.app",
   //BASE_URL: "http://localhost:8080",
 };
+export default constants;

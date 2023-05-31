@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./styles.module.scss";
 import { BsPlayCircleFill, BsFillPauseCircleFill } from "react-icons/bs";
 import { IVideoViewProps, colors, constants } from "values";
-import { useParams } from "react-router-dom";
 import { TailSpin } from "react-loader-spinner";
 
 const VideoView = ({

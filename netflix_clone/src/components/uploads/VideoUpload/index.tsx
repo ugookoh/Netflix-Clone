@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import styles from "./styles.module.scss";
 import { dataURItoBlob } from "utils";
 import { IVideoUploadProps } from "values";
@@ -28,7 +28,7 @@ const VideoUpload = ({
     const y = (videoHeight - targetHeight) / 2;
     canvas.width = targetWidth;
     canvas.height = targetHeight;
-    canvas.getContext('2d')?.drawImage(video, x, y, targetWidth, targetHeight, 0, 0, targetWidth, targetHeight);
+    canvas.getContext("2d")?.drawImage(video, x, y, targetWidth, targetHeight, 0, 0, targetWidth, targetHeight);
     const dataURL = canvas.toDataURL();
 
     const blob = dataURItoBlob(dataURL);
@@ -74,7 +74,7 @@ const VideoUpload = ({
         </video>
       ) : (
         <>
-          <img src="upload.png" className={styles.uploadImage} />
+          <img src="upload.png" className={styles.uploadImage} alt="upload icon" />
           <p>{dragActive ? "Drop .mp4 file here" : "Click or drag your .mp4 file to upload"}</p>{" "}
         </>
       )}
