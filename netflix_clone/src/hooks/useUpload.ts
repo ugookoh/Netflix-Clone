@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { constants } from "values";
 
 const useUpload = () => {
   const [dragActive, setDragActive] = useState(false);
@@ -39,11 +40,11 @@ const useUpload = () => {
       const file = files[0];
       const fd = new FormData();
       fd.append("file", file);
-      const res_vid = await axios.post(`http://localhost:8080/upload`, fd);
-      const res_thumb = await axios.post(`http://localhost:8080/uploadImage`, thumbnail);
+      const res_vid = await axios.post(`${constants.BASE_URL}/upload`, fd);
+      const res_thumb = await axios.post(`${constants.BASE_URL}/uploadImage`, thumbnail);
       const videoId = res_vid.data.id;
       const thumbnailId = res_thumb.data.id;
-      await axios.post(`http://localhost:8080/uploadFileDetails`, {
+      await axios.post(`${constants.BASE_URL}/uploadFileDetails`, {
         title,
         thumbnailId,
         videoId,

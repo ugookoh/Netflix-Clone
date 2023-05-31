@@ -10,7 +10,7 @@ import Grid from "gridfs-stream";
 import mongoose from "mongoose";
 import Video from "./models/video";
 
-const PORT = 80;
+const PORT = 8080;
 const app = express();
 const corsOptions = { origin: `*` };
 

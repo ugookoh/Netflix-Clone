@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useRef, useState } from "react";
 import { debounce } from "lodash";
-import { IVideoSearchResults } from "values";
+import { IVideoSearchResults, constants } from "values";
 
 const useSearch = () => {
   const [loading, setLoading] = useState(true);
@@ -17,7 +17,7 @@ const useSearch = () => {
 
   const getVideos = debounce(async () => {
     try {
-      const result = await axios.get(`http://localhost:8080/videos?query=${queryRef.current}`);
+      const result = await axios.get(`${constants.BASE_URL}/videos?query=${queryRef.current}`);
       setLoading(false);
       setResults(result.data);
       if (queryRef.current.length !== 0) setRandomList([]);
