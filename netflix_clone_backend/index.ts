@@ -9,8 +9,8 @@ import { connectDB } from "./db";
 import Grid from "gridfs-stream";
 import mongoose from "mongoose";
 import Video from "./models/video";
-import range from "range-parser";
-const PORT = 8080;
+
+const PORT = 80;
 const app = express();
 const corsOptions = { origin: `*` };
 
