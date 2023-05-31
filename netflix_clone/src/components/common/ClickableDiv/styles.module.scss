@@ -1,0 +1,40 @@
+.containerZoom {
+  transition: all 0.2s ease-in-out;
+}
+.containerZoom:hover {
+  transform: scale(1.3);
+}
+
+.container:active {
+  opacity: 0.5;
+}
+
+.container:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.container:active {
+  opacity: 0.7;
+}
+
+.containerDisabled {
+  opacity: 0.7;
+}
+
+.containerDisabled:hover {
+  cursor: initial;
+}
+
+.containerDisabled:active {
+  opacity: 0.7;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
